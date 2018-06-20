@@ -3,7 +3,6 @@ import './thumbnail.css';
 import PropTypes from 'prop-types';
 
 const Thumbnail = ({ slider, onClickThumb, index, posActive }) => {
-	console.log('Thumbnail slider: ', slider);
 	return (
 		<div
 			onClick={() => {
