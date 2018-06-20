@@ -15,4 +15,4 @@ function getFeedSliderReducer(state = feedSlider, action) {
 };
 
 
-export default reducerSearchTracks;
+export default getFeedSliderReducer;
