@@ -5,9 +5,6 @@ import PropTypes from 'prop-types';
 import Thumbnail from './Thumbnail';
 import Navigation from './Navigation';
 import { connect } from 'react-redux';
-import setFeedSliderAction from '../../redux/actions/setFeedSlider';
-import { SET_FEED_SLIDER } from '../../constants';
-import jsonMockFeedSlider from '../../mock/slider.json';
 
 class Slider extends Component {
   static propTypes = {
@@ -15,29 +12,41 @@ class Slider extends Component {
     feed: PropTypes.object
   }
 
-  // JSON date can will be recived from props Parent component
-  componentDidMount() {
-    if (!this.props.feed.slider) return;
-    const { setFeedSliderAction } = this.props;
-    setFeedSliderAction(SET_FEED_SLIDER, jsonMockFeedSlider);
+  constructor(props) {
+    super(props);
+  }
+
+  state = {
+    posImg: 0,
+    current_url: this.props.feed.slider[0].hero
   }
 
   render() {
     console.log('Props: ', this);
     console.log('this.props.feed: ', this.props.feed);
+    console.log('============', this.state.current_url);
     const { slider } = this.props.feed;
+    const { current_url } = this.state;
     return (
-      <div>
+      <div onClick={this.hChangeUrl} className="slider-app">
         <h2>Slider</h2>
+
+        <div className="slider__image">
+          <img src={current_url} alt=""/>
+        </div>
+
         <Thumbnail slider={slider} />
         <Navigation slider={slider} />
       </div>
     );
   }
+
+  hChangeUrl = () => {
+    this.setState({current_url: this.props.feed.slider[1].hero});
+  }
+
 }
 
 export default connect((state) => ({
   feed: state.slider
-}), {
-  setFeedSliderAction
-})(Slider);
+}), null)(Slider);
