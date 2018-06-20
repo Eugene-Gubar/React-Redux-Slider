@@ -4,5 +4,36 @@
   padding: 0px;
   margin: 0px auto;
   width: 920px;
-  height: 640px;
+  text-align: center;
+}
+
+.slider__image {
+  position: relative;
+}
+
+.slider__image > img {
+  display: inline-block;
+  width: 640px;
+  height: 480px;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  height: 191px;
+  float: left;
+}
+
+.slider--title {
+  background-color: #000000ad;
+  position: absolute;
+  bottom: 16px;
+  left: 150px;
+  font-size: 26px;
+  color: #fff;
+  text-align: center;
+  width: 620px;
 }

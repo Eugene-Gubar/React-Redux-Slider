@@ -1,0 +1,24 @@
+
+
+.nav-buttons {
+  clear: both;
+}
+
+
+button.btn {
+  font-size: 26px;
+  font-weight: 600;
+  border: none;
+  margin: 15px;
+  padding: 20px 80px;
+  cursor: pointer;
+  background-color: #8BC34A;
+}
+
+.btn-prev {
+  float: left;
+}
+
+.btn-next {
+  float: right;
+}
