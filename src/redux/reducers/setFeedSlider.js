@@ -1,7 +1,7 @@
 
 import { SET_FEED_SLIDER } from '../../constants';
 
-const feedSlider = [];
+const feedSlider = {};
 
 function getFeedSliderReducer(state = feedSlider, action) {
 

@@ -10,11 +10,14 @@ import { SET_FEED_SLIDER } from '../../constants';
 import jsonMockFeedSlider from '../../mock/slider.json';
 
 class Slider extends Component {
-  static propTypes = { }
-
+  static propTypes = {
+    setFeedSliderAction: PropTypes.func,
+    feed: PropTypes.object
+  }
 
   // JSON date can will be recived from props Parent component
   componentDidMount() {
+    if (!this.props.feed.slider) return;
     const { setFeedSliderAction } = this.props;
     setFeedSliderAction(SET_FEED_SLIDER, jsonMockFeedSlider);
   }
