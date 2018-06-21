@@ -58,12 +58,12 @@ class Slider extends Component {
 
 	onClickNavPrev = () => {
 		const { offset, step } = this.state;
-		if (this.state.offset - offset < 0) return;
+		if (this.state.offset - step < 0) return;
 		this.setState({ offset: offset - step });
 	};
 	onClickNavNext = () => {
 		const { offset, step } = this.state;
-		if (this.state.offset + offset >= this.props.feed.slider.length) return;
+		if (this.state.offset + step >= this.props.feed.slider.length) return;
 		this.setState({ offset: offset + step });
 	};
 
