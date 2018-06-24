@@ -23,16 +23,18 @@ class Slider extends Component {
 
 	render() {
 		const { slider } = this.props.feed;
-		const { posSlide, offset, step } = this.state;
+    const { posSlide, offset, step } = this.state;
 		return (
 			<div onMouseEnter={this.stopAutoScroll} onMouseLeave={this.autoScroll} className="slider-app">
-				<h2>Slider</h2>
 
 				<div className="slider__image">
-					<img src={slider[posSlide].hero} alt={slider[posSlide].text} />
-					<div className="slider--title">
-						<p>{slider[posSlide].text}</p>
-					</div>
+					<div className="slider__image--picture">
+            <div className="slider__image--blur" style={{'background': `url(${slider[posSlide].hero})`}}></div>
+            <img src={slider[posSlide].hero} alt={slider[posSlide].text} />
+              <div className="slider--title">
+                <p title={slider[posSlide].text}>{slider[posSlide].text}</p>
+              </div>
+          </div>
 
 					<ul>
 						{slider.slice(offset, offset + step).map((slider, index) => {

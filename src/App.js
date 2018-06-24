@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+// import './App.css';
 import Slider from './components/Slider';
 import jsonMockFeedSlider from './mock/slider.json';
 

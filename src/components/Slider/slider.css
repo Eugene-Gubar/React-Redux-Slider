@@ -1,39 +1,135 @@
-
-
 .slider-app {
   padding: 0px;
   margin: 0px auto;
   width: 920px;
   text-align: center;
+  margin-top: 56px;
+  font-family: monospace;
 }
 
 .slider__image {
+  margin: 0px auto;
+  width: 760px;
+}
+
+.slider__image--picture {
   position: relative;
+  height: 428px;
+  margin-bottom: 22px;
 }
 
-.slider__image > img {
+.slider__image--blur {
+  position: absolute;
+  width: 760px;
+  height: 428px;
+  top: 0px;
+  left: 0px;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: 50% 50% !important;
+  filter: blur(8px);
+}
+
+.slider__image--picture > img {
+  position: relative;
   display: inline-block;
-  width: 640px;
-  height: 480px;
+  height: 428px;
+  width: auto;
+  max-width: 760px;
+}
+.slider--title {
+  position: absolute;
+  width: 600px;
+  height: 70px;
+  left: 80px;
+  background-color: rgba(43, 43, 43, 0.54);
+  bottom: 0px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  padding: 18px;
 }
 
+.slider--title > p {
+  margin: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
 ul {
   list-style-type: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 ul li {
-  height: 191px;
+  height: 180px;
+  width: 180px;
+  cursor: pointer;
+  margin: 0px 5px;
   float: left;
 }
 
-.slider--title {
-  background-color: #000000ad;
-  position: absolute;
-  bottom: 16px;
-  left: 150px;
-  font-size: 26px;
-  color: #fff;
-  text-align: center;
-  width: 620px;
+.thumbnail--active {
+  background-color: rgba(0, 0, 0, 0.54);
+  border: 2px solid #fff;
 }
+
+.thumbnail__section {
+  position: relative;
+}
+
+.thumbnail--title {
+  background-color: rgba(43, 43, 43, 0.54);
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  width: 176px;
+  height: 35px;
+  line-height: 2;
+  position: absolute;
+  bottom: 0px;
+  overflow: hidden;
+}
+
+.thumbnail--image {
+  padding-top: 4px;
+}
+
+.thumbnail--title > p {
+  margin: 0px;
+}
+
+.nav-buttons {
+  clear: both;
+}
+
+.btn {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+
+.btn:hover {
+  background-color: #555555;
+  color: white;
+}
+
+/* .btn-prev {
+  float: left;
+}
+
+.btn-next {
+  float: right;
+} */
